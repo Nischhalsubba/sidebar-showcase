@@ -1,0 +1,273 @@
+/* ============================================================
+   INTERACTIVE SIDEBAR SYSTEM
+   Pixel-perfect hover, active, transition & layout overrides
+   ============================================================ */
+
+/* --- LAYOUT FIXES --- */
+
+/* Variant 4 - Fix expand menu positioning (was calc-based, needs fixed px) */
+.sidebar-preview.variant-4 [data-name="Expand menu"] {
+  left: 277px !important;
+}
+
+/* Variant 1 - Expanded panel natural width */
+.sidebar-preview.variant-1 > div {
+  width: 100% !important;
+}
+.sidebar-preview.variant-1 [data-name="expanded"] {
+  min-width: 0 !important;
+  flex: 1 1 0 !important;
+}
+
+/* --- GLOBAL TRANSITION --- */
+.sidebar-preview * {
+  transition: background-color 0.12s ease, opacity 0.12s ease, transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+/* --- MENU ITEM HOVER STATES --- */
+.sidebar-preview [data-name$=" item"]:hover,
+.sidebar-preview [data-name$=" Item"]:hover,
+.sidebar-preview [data-name*="Analysis item"]:hover,
+.sidebar-preview [data-name*="Segmentation item"]:hover,
+.sidebar-preview [data-name*="Value item"]:hover,
+.sidebar-preview [data-name*="Program item"]:hover,
+.sidebar-preview [data-name*="Calculation item"]:hover,
+.sidebar-preview [data-name*="Dashboard item"]:hover,
+.sidebar-preview [data-name*="Dashboard Item"]:hover,
+.sidebar-preview [data-name*="Key Metrics"]:not([data-name*="Icon"]):hover,
+.sidebar-preview [data-name*="Sales Performance"]:not([data-name*="Icon"]):hover,
+.sidebar-preview [data-name*="Product Analysis"]:not([data-name*="Icon"]):hover,
+.sidebar-preview [data-name*="Team item"]:hover,
+.sidebar-preview [data-name*="Team Item"]:hover,
+.sidebar-preview [data-name*="Custom Reports"]:not([data-name*="Icon"]):hover,
+.sidebar-preview [data-name*="Financials"]:not([data-name*="Icon"]):hover,
+.sidebar-preview [data-name*="Lead item"]:hover,
+.sidebar-preview [data-name*="Lead Item"]:hover,
+.sidebar-preview [data-name*="Opportunities"]:not([data-name*="Icon"]):hover,
+.sidebar-preview [data-name*="Funnel item"]:hover,
+.sidebar-preview [data-name*="Funnel Item"]:hover,
+.sidebar-preview [data-name*="Submenu Item"]:hover,
+.sidebar-preview [data-name*="Menu Item"]:hover,
+.sidebar-preview [data-name*="Section Item"]:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  border-radius: 8px;
+}
+
+/* Dark sidebar menu item hover (Variant 2 icon rail) */
+.sidebar-preview.variant-2 [data-name="Side menu"] [data-name*="icon"]:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px;
+}
+
+/* Active press feedback */
+.sidebar-preview [data-name$=" item"]:active,
+.sidebar-preview [data-name$=" Item"]:active,
+.sidebar-preview [data-name*="Menu Item"]:active,
+.sidebar-preview [data-name*="Section Item"]:active,
+.sidebar-preview [data-name*="Submenu Item"]:active {
+  transform: scale(0.985);
+  transition-duration: 0.04s;
+}
+
+/* --- COLLAPSIBLE SECTION HEADERS --- */
+.sidebar-preview [data-name*="Management header"]:hover,
+.sidebar-preview [data-name*="Management Header"]:hover,
+.sidebar-preview [data-name*="Forecasting header"]:hover,
+.sidebar-preview [data-name*="Forecasting Header"]:hover,
+.sidebar-preview [data-name*="Subsection Header"]:hover,
+.sidebar-preview [data-name*="Section Header"]:hover,
+.sidebar-preview [data-name*="Segmentation header"]:hover,
+.sidebar-preview [data-name*="Value header"]:hover,
+.sidebar-preview [data-name*="Retention header"]:hover,
+.sidebar-preview [data-name*="General header"]:hover,
+.sidebar-preview [data-name*="General Header"]:hover,
+.sidebar-preview [data-name*="Reports header"]:hover,
+.sidebar-preview [data-name*="Reports Header"]:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.03) !important;
+  border-radius: 6px;
+}
+
+/* --- ICON RAIL BUTTONS --- */
+
+/* Variant 1 icon rail items */
+.sidebar-preview [data-name="search_line"]:hover,
+.sidebar-preview [data-name="grid_2_line"]:hover,
+.sidebar-preview [data-name="wallet_4_line"]:hover,
+.sidebar-preview [data-name="package_line"]:hover,
+.sidebar-preview [data-name="group_2_line"]:hover,
+.sidebar-preview [data-name="vector_group_fill"]:hover {
+  cursor: pointer;
+  transform: scale(1.12);
+  opacity: 0.8 !important;
+}
+
+/* Variant 2 & 6 icon rail buttons */
+.sidebar-preview [data-name*="Analytics icon"]:hover,
+.sidebar-preview [data-name*="Apps icon"]:hover,
+.sidebar-preview [data-name*="Article Shortcut icon"]:hover,
+.sidebar-preview [data-name*="Auto Awesome Mosaic icon"]:hover,
+.sidebar-preview [data-name*="Card Travel icon"]:hover,
+.sidebar-preview [data-name="Sidebar Icon 2"]:hover,
+.sidebar-preview [data-name="Sidebar Icon 3"]:hover,
+.sidebar-preview [data-name="Sidebar Icon 4"]:hover,
+.sidebar-preview [data-name="Sidebar Icon 5"]:hover,
+.sidebar-preview [data-name="Sidebar Icon 6"]:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  border-radius: 8px;
+}
+
+/* --- SETTINGS / UTILITY BUTTONS --- */
+.sidebar-preview [data-name="Settings button"]:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+  opacity: 0.65 !important;
+}
+
+.sidebar-preview [data-name="Sun button"]:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.sidebar-preview [data-name="dock_to_left"]:hover {
+  cursor: pointer;
+  transform: scale(1.12);
+  opacity: 0.6;
+}
+
+.sidebar-preview [data-name="more_vert"]:hover {
+  cursor: pointer;
+  transform: scale(1.12);
+  opacity: 0.6;
+}
+
+/* --- SEARCH BAR --- */
+.sidebar-preview [data-name="Search"]:hover {
+  cursor: text;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* --- PROFILE / USER SECTIONS --- */
+.sidebar-preview [data-name="Profile"]:hover,
+.sidebar-preview [data-name="Admin profile"]:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+.sidebar-preview [data-name="Profile Action"]:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+}
+
+.sidebar-preview [data-name="User avatar"]:hover {
+  cursor: pointer;
+  transform: scale(1.06);
+}
+
+.sidebar-preview [data-name="memoji"]:hover {
+  cursor: pointer;
+  transform: scale(1.06);
+}
+
+/* --- LOGO --- */
+.sidebar-preview [data-name="Logo"]:hover,
+.sidebar-preview [data-name="Logo container"]:hover,
+.sidebar-preview [data-name="Logo Container"]:hover,
+.sidebar-preview [data-name="Header Container"]:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.sidebar-preview [data-name="Side menu icon"]:hover,
+.sidebar-preview [data-name="Sidebar Icon 1"]:hover {
+  cursor: pointer;
+  transform: scale(1.06);
+}
+
+/* --- NOTIFICATION BADGES --- */
+.sidebar-preview [data-name*="Team notification"]:hover,
+.sidebar-preview [data-name*="Team Notification"]:hover,
+.sidebar-preview [data-name*="Team Count"]:hover,
+.sidebar-preview [data-name*="Notification Badge"]:hover,
+.sidebar-preview [data-name*="Notification Container"]:hover {
+  cursor: pointer;
+  transform: scale(1.06);
+}
+
+/* --- ARROWS / CHEVRONS --- */
+.sidebar-preview [data-name="arrow_drop_down"]:hover,
+.sidebar-preview [data-name*="chevron_right"]:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+/* --- GROUPED CARD CONTAINERS (Variant 3) --- */
+.sidebar-preview [data-name="01"]:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
+  cursor: pointer;
+}
+.sidebar-preview [data-name="02"]:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
+  cursor: pointer;
+}
+
+/* --- SEARCH COMMAND KEY (Variant 3, 4, 5) --- */
+.sidebar-preview [data-name="Search Command"]:hover,
+.sidebar-preview [data-name="Command Icon Container"]:hover,
+.sidebar-preview [data-name="Command Icon"]:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* --- EXPAND MENU ITEMS (Variant 4) --- */
+.sidebar-preview.variant-4 [data-name="Expand menu"] [data-name*="Menu Item"]:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  border-radius: 4px;
+}
+
+/* Learn more link */
+.sidebar-preview .underline:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* --- ACTIVE ITEM HIGHLIGHT --- */
+/* Simulate selected/active state via data-name click targets */
+.sidebar-preview [data-name*="item"].sidebar-active,
+.sidebar-preview [data-name*="Item"].sidebar-active {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  border-radius: 8px;
+}
+
+/* --- TOOLTIP STYLES --- */
+.sidebar-tooltip {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: #1e293b;
+  color: white;
+  font-size: 12px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+
+.sidebar-tooltip.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- SCROLLBAR STYLING --- */
+.sidebar-preview::-webkit-scrollbar {
+  width: 0;
+}
