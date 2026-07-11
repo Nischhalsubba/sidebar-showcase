@@ -1,265 +1,177 @@
 <div align="center">
 
-# ✦ Sidebar Showcase
+<img src="./docs/assets/sidebar-showcase-thumbnail.svg" width="100%" alt="Sidebar Showcase branded repository thumbnail" />
 
-### Figma-to-React UI Exploration
+# Sidebar Showcase
 
-**A Vite-powered React interface bundle exported from Figma and refined as a modern sidebar / dashboard UI showcase using Radix UI, Material UI, Motion, Tailwind CSS, charts, drag-and-drop, and interaction-heavy component patterns.**
+### Six Figma-derived sidebar systems connected through one interactive React playground
 
-![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=111111)
-![Vite](https://img.shields.io/badge/Vite-6.3.5-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind-4.1-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Radix UI](https://img.shields.io/badge/Radix-UI-161618?style=for-the-badge&logo=radixui&logoColor=white)
-![MUI](https://img.shields.io/badge/MUI-7.3-007FFF?style=for-the-badge&logo=mui&logoColor=white)
-![Motion](https://img.shields.io/badge/Motion-12.x-111111?style=for-the-badge)
+A focused design-to-code laboratory for comparing sidebar patterns, testing navigation behavior, and turning generated Figma output into a reusable interface system.
+
+[Engineering case study](./docs/PRODUCT_AND_ENGINEERING_CASE_STUDY.md) · [Repository instructions](./AGENTS.md)
+
+![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=111111)
+![Vite](https://img.shields.io/badge/Vite-6.3-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-4.1-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-9.15-F69220?style=flat-square&logo=pnpm&logoColor=white)
+
+![Stars](https://img.shields.io/github/stars/Nischhalsubba/sidebar-showcase?style=flat-square)
+![Forks](https://img.shields.io/github/forks/Nischhalsubba/sidebar-showcase?style=flat-square)
+![Issues](https://img.shields.io/github/issues/Nischhalsubba/sidebar-showcase?style=flat-square)
+![Last commit](https://img.shields.io/github/last-commit/Nischhalsubba/sidebar-showcase?style=flat-square)
 
 </div>
 
----
+## Product concept
 
-## ✨ Overview
+Sidebar Showcase is not a generic component dump. It is an interactive comparison environment for six sidebar directions imported from Figma and normalized through one shared state and interaction layer.
 
-**Sidebar Showcase** is a Figma-generated React code bundle that demonstrates a modern UI direction for sidebar-heavy dashboards, admin panels, and component-rich web interfaces.
+The workspace lets a reviewer:
 
-The original design source is available in Figma:
+- compare six visual variants
+- activate one variant at a time
+- switch between a gallery and dashboard playground
+- search within each variant
+- collapse and expand detected groups
+- select items and synchronize active states
+- toggle theme state
+- inspect contextual actions
+- review a bounded activity timeline
 
-```text
-https://www.figma.com/design/yIhpIK8g66e69zJbjcgxDD/Untitled
-```
+## Sidebar variants
 
-The repository uses Vite as the build tool and includes a large interface library stack. This makes it useful as a UI exploration project where a designer can inspect how a visual design can become an interactive React prototype.
+| ID | Variant | Accent | Original width |
+|---:|---|---|---:|
+| 1 | Customer Panel | Orange | 284px |
+| 2 | Dark Navigation | Blue | 277px |
+| 3 | Grouped Cards | Orange | 277px |
+| 4 | Dual Panel | Indigo | 476px |
+| 5 | Green Minimal | Emerald | 277px |
+| 6 | Dashboard Nav | Blue | 277px |
 
----
-
-## 🧭 Table of Contents
-
-- [Project Purpose](#-project-purpose)
-- [Designer’s Perspective](#-designers-perspective)
-- [Tech Stack](#-tech-stack)
-- [UI System Capabilities](#-ui-system-capabilities)
-- [Possible Use Cases](#-possible-use-cases)
-- [Getting Started](#-getting-started)
-- [Available Scripts](#-available-scripts)
-- [Recommended Repository Structure](#-recommended-repository-structure)
-- [Design QA Checklist](#-design-qa-checklist)
-- [Developer QA Checklist](#-developer-qa-checklist)
-- [Roadmap](#-roadmap)
-- [Notes](#-notes)
-
----
-
-## 🎯 Project Purpose
-
-This project is best understood as a **design-to-code sidebar/dashboard showcase**.
-
-It can be used to explore:
-
-- sidebar navigation layouts
-- dashboard shell structure
-- command-menu interactions
-- component-rich admin screens
-- theme-aware UI patterns
-- motion-driven transitions
-- drag-and-drop interactions
-- charts and data visualization
-- resizable workspace panels
-- form-heavy interface patterns
-
-Because this is a Figma code bundle, the next step should be refinement: organizing components, removing unused dependencies, improving naming, tightening accessibility, and aligning the code with final product requirements.
-
----
-
-## 🎨 Designer’s Perspective
-
-This repository is valuable because it sits between design and implementation.
-
-From a product designer’s point of view, the important question is not only whether the UI looks like the Figma frame. The better question is:
-
-> Can this become a maintainable interface system that real users can navigate, resize, search, filter, drag, and understand?
-
-The README is written to help future work focus on:
-
-- preserving design intent
-- improving component structure
-- making interactions accessible
-- reducing dependency noise
-- turning Figma output into product-grade UI
-
----
-
-## 🛠 Tech Stack
-
-| Layer | Technology | Purpose |
-|---|---|---|
-| Build Tool | Vite `6.3.5` | Fast development and build workflow |
-| UI Framework | React `18.3.1` | Component-driven interface |
-| Styling | Tailwind CSS `4.1.12` | Utility-first styling system |
-| Primitive UI | Radix UI | Accessible low-level components |
-| Material Components | MUI `7.3.5` | Material-style UI components and icons |
-| Icons | Lucide React + MUI Icons | Interface iconography |
-| Motion | `motion` | UI animation and transitions |
-| Charts | Recharts | Data visualization |
-| Routing | React Router `7.13.0` | Client-side route structure |
-| Forms | React Hook Form | Form state management |
-| Drag and Drop | React DnD | Interactive layout/item movement |
-| Panels | React Resizable Panels | Resizable workspace layouts |
-| Command UI | `cmdk` | Command palette/search command patterns |
-| Toasts | Sonner | Notification feedback |
-| Drawers | Vaul | Drawer/bottom-sheet style UI |
-
----
-
-## 🧩 UI System Capabilities
-
-The dependency stack suggests support for a very complete dashboard-style UI system.
-
-| Capability | Libraries / Direction |
-|---|---|
-| Sidebar shell | React + Tailwind + routing |
-| Command palette | `cmdk` |
-| Dialogs and overlays | Radix Dialog, Alert Dialog, Popover, Hover Card |
-| Forms | React Hook Form, Radix inputs, MUI inputs |
-| Charts | Recharts |
-| Drag and drop | React DnD |
-| Resizable panels | React Resizable Panels |
-| Tabs and accordions | Radix Tabs, Accordion, Collapsible |
-| Toast feedback | Sonner |
-| Drawers/sheets | Vaul |
-| Theme support | next-themes direction |
-| Motion | Motion package and Tailwind animation helpers |
-
----
-
-## 🧠 Possible Use Cases
-
-This repo can become a foundation for:
-
-- SaaS dashboard sidebar layouts
-- admin panel prototypes
-- CRM/ERP side navigation concepts
-- design system component demos
-- analytics dashboards
-- product settings panels
-- workspace-style tools
-- AI dashboard shells
-- internal tool UI exploration
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm / pnpm / yarn
-
-### Install dependencies
-
-```bash
-npm install
-```
-
-### Start development server
-
-```bash
-npm run dev
-```
-
-The local development URL is usually:
+## Architecture
 
 ```text
-http://localhost:5173/
-```
-
----
-
-## 📜 Available Scripts
-
-| Command | Purpose |
-|---|---|
-| `npm run dev` | Starts the Vite development server |
-| `npm run build` | Builds the app for production |
-
----
-
-## 📁 Recommended Repository Structure
-
-A cleaner long-term structure could look like this:
-
-```text
-.
-├── src/
-│   ├── app/
+src/
+├── app/
+│   ├── App.tsx
 │   ├── components/
-│   │   ├── layout/
-│   │   ├── sidebar/
-│   │   ├── navigation/
-│   │   ├── data-display/
-│   │   ├── forms/
-│   │   └── feedback/
-│   ├── routes/
-│   ├── styles/
-│   ├── lib/
-│   └── main.tsx
-├── public/
-├── package.json
-└── README.md
+│   │   ├── interactive-sidebar.tsx
+│   │   ├── sidebar-all-variants.tsx
+│   │   ├── sidebar-dashboard-playground.tsx
+│   │   └── sidebar-dashboard-panel.tsx
+│   └── sidebar/
+│       ├── action-map.ts
+│       ├── reducer.ts
+│       ├── types.ts
+│       └── variants.ts
+├── imports/            Figma-generated sidebar implementations
+├── styles/             theme, Tailwind, fonts, and interaction CSS
+└── main.tsx             React entry point
 ```
 
-This helps separate layout, navigation, reusable components, routes, and utility logic.
+`App.tsx` owns the workspace view and reducer. `variants.ts` registers the six imported implementations. `InteractiveSidebar` adapts generated `data-name` nodes into reusable actions, search, tooltips, collapse behavior, active selection, and theme state.
 
----
+## State model
 
-## ✅ Design QA Checklist
+The reducer tracks:
 
-- [ ] Sidebar states are clear: expanded, collapsed, active, hover, disabled.
-- [ ] Navigation hierarchy is understandable.
-- [ ] Icons match labels and do not create confusion.
-- [ ] Spacing is consistent across sidebar and content areas.
-- [ ] Responsive behavior is checked for tablet and mobile.
-- [ ] Motion supports orientation instead of distracting.
-- [ ] Empty states and loading states are designed.
-- [ ] Component states match the original Figma intent.
+- active workspace view
+- active sidebar variant
+- selected item and target
+- selected action type
+- expanded and collapsed sections
+- per-variant search queries
+- light or dark theme state
+- a maximum of 50 recent interaction events
 
----
+This keeps generated components visually intact while moving product behavior into a predictable shared layer.
 
-## 🧪 Developer QA Checklist
+## Interaction adapter
 
-- [ ] `npm install` works.
-- [ ] `npm run dev` works.
-- [ ] `npm run build` succeeds.
-- [ ] No unused dependency is kept without reason.
-- [ ] Components are renamed from generated names into meaningful names.
-- [ ] Accessibility warnings are reviewed.
-- [ ] Keyboard navigation works for menus, dialogs, tabs, and forms.
-- [ ] Drag-and-drop interactions have fallback behavior.
-- [ ] Charts are readable and labeled.
+The interaction wrapper adds behavior that raw Figma exports do not provide consistently:
 
----
+- target detection through `data-name`
+- action mapping
+- labels derived from visible text or nearby headers
+- search overlays positioned over imported search fields
+- per-variant filtering
+- collapse synchronization
+- active-item styling
+- hover tooltips for icon-only controls
+- theme state forwarding
+- activity logging
 
-## 🗺 Roadmap
+## Current status
 
-- Rename generated components into product-specific names.
-- Add screenshots/GIF previews to the README.
-- Remove unused dependencies after auditing actual usage.
-- Add routing documentation.
-- Add accessibility pass for sidebar, command menu, and dialogs.
-- Add theme documentation.
-- Add a component inventory table.
-- Add Storybook or a simple component gallery if the repo grows.
+| Area | Status |
+|---|---|
+| Six sidebar variants | Implemented |
+| Variant comparison grid | Implemented |
+| Dashboard playground | Implemented |
+| Reducer-driven state | Implemented |
+| Per-variant search | Implemented |
+| Collapsible sections | Implemented |
+| Theme toggling | Implemented |
+| Contextual dashboard actions | Implemented |
+| Activity timeline | Implemented |
+| Automated tests | Not confirmed |
+| Public live deployment | Not documented |
+| Browser screenshot in this pass | Not captured |
 
----
+The repository thumbnail is a branded presentation asset derived from the real workspace and variant system. It is not presented as a browser screenshot.
 
-## 📝 Notes
+## Technology
 
-This project started as a Figma code bundle. Generated code is a strong starting point, but it should be reviewed before production use.
+The repository includes React, Vite, Tailwind CSS, Radix UI, Material UI, Motion, Recharts, React DnD, React Resizable Panels, `cmdk`, Sonner, Vaul, and related component utilities.
 
-The recommended next step is to convert the generated output into a maintainable component system.
+The actual app currently uses a smaller focused subset than the full dependency list suggests. Dependency pruning should be based on verified imports, not optimism with a delete key.
 
----
+## Run locally
 
-<div align="center">
+Requirements:
 
-Designed as a bridge between Figma exploration and production-ready dashboard UI.
+- Node.js 22 or newer
+- pnpm 9 or newer
 
-</div>
+```bash
+pnpm install
+pnpm dev
+```
+
+Production verification:
+
+```bash
+pnpm check
+pnpm preview
+```
+
+## Important risks
+
+- Imported Figma components use generated names that are difficult to maintain.
+- Behavior depends on `data-name` attributes remaining stable.
+- The interaction adapter uses DOM inspection and mutation to bridge generated markup.
+- Accessibility of imported visual components is not automatically guaranteed.
+- The dependency list is much larger than the proven runtime surface.
+- Search and collapse behavior should be tested after any Figma re-export.
+- The repository has no documented public deployment in the inspected files.
+
+## Recommended next work
+
+1. Add unit coverage for reducer and action mapping.
+2. Add browser tests for search, collapse, selection, and theme state.
+3. Create a stable semantic contract for imported variants.
+4. Replace generated file names gradually with meaningful names.
+5. Audit and remove unused dependencies.
+6. Test keyboard and screen-reader behavior.
+7. Publish a verified deployment and capture real desktop and mobile screenshots.
+
+## Documentation
+
+- [Product and engineering case study](./docs/PRODUCT_AND_ENGINEERING_CASE_STUDY.md)
+- [Repository instructions](./AGENTS.md)
+- [Branded repository thumbnail](./docs/assets/sidebar-showcase-thumbnail.svg)
+
+## Author
+
+Designed and maintained by [Nischhal Raj Subba](https://github.com/Nischhalsubba).
