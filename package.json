@@ -1,17 +1,20 @@
 {
-  "name": "@figma/my-make-file",
+  "name": "sidebar-showcase",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
+  "description": "An interactive React sidebar pattern laboratory with six Figma-derived variants, reducer-driven state, per-variant search, collapsible sections, theme switching, contextual actions, and an activity timeline.",
+  "author": "Nischhal Raj Subba",
+  "license": "UNLICENSED",
   "packageManager": "pnpm@9.15.0",
   "engines": {
     "node": ">=22.0.0",
     "pnpm": ">=9.0.0"
   },
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
     "check": "vite build",
-    "dev": "vite",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -81,16 +84,10 @@
     "react-dom": "18.3.1"
   },
   "peerDependenciesMeta": {
-    "react": {
-      "optional": true
-    },
-    "react-dom": {
-      "optional": true
-    }
+    "react": { "optional": true },
+    "react-dom": { "optional": true }
   },
   "pnpm": {
-    "overrides": {
-      "vite": "6.3.5"
-    }
+    "overrides": { "vite": "6.3.5" }
   }
 }
