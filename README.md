@@ -79,3 +79,7 @@ flowchart LR
 ## QA and maintainer evidence
 
 Review [add sidebar state, keyboard and responsive QA matrix](./docs/SIDEBAR_STATE_AND_ACCESSIBILITY_MATRIX.md) for interaction acceptance, accessibility, evidence collection and rollback.
+
+## Dependency reproducibility and CI recovery
+
+See the [lockfile and CI recovery guide](docs/LOCKFILE_CI_RECOVERY.md) for the observed npm clean-install blocker, safe remediation steps and verification requirements. This complements the existing sidebar accessibility matrix.
