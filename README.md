@@ -75,3 +75,7 @@ Use accurate terms such as **sidebar UI, sidebar navigation, responsive sidebar,
 flowchart LR
     PATTERN["Pattern / behavior change"] --> STATES["Review desktop + mobile states"] --> ACCESS["Keyboard / accessibility check"] --> VISUAL["Responsive visual review"] --> PR["Pull request"]
 ```
+
+## QA and maintainer evidence
+
+Review [add sidebar state, keyboard and responsive QA matrix](./docs/SIDEBAR_STATE_AND_ACCESSIBILITY_MATRIX.md) for interaction acceptance, accessibility, evidence collection and rollback.
